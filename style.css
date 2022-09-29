@@ -1,0 +1,73 @@
+/*PROPRIÉTÉS GÉNÉRALES*/
+
+/* Écriture
+font-family: 'Roboto', sans-serif;
+font-family: 'Shrikhand', cursive;
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* HEADER*/
+
+header {
+    text-align: center;
+    box-shadow: 0px 2px 2px lightgray;
+    padding: 20px;
+    position: relative; /* nécessaire pour qu'il passe au-dessus du bloc suivant (Paris) sinon on ne verra pas le box-shadox*/
+}
+
+header img {
+    width: 50%;
+}
+
+/* PREMIÈRE SECTION: PARIS ET TITRES*/
+
+.paris {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background-color: #f3f3f3;
+    padding: 5px;
+}
+
+h1 {
+    font-size: 15px;
+}
+
+.textes-haut {
+    text-align: center;
+    font-size: 16px;
+    padding: 10%;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-weight: 900;
+}
+
+/*comment mettre l'autre option du roboto plus fin pour "découvrez des restaus..."? */
+
+
+.textes-haut button {
+    
+    margin-top: 10px;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 5px 24px -8px #000000;
+}
+
+.textes-haut button:hover {
+    background-image: linear-gradient(#e67dc3, #BF9CE8); /*couleurs plus claires choisies sur la roue chromatique. On peut aussi mettre opacity*/
+    box-shadow: 0px 5px 50px -8px #000000;;
+}
