@@ -34,7 +34,7 @@ header img {
     justify-content: center;
     text-align: center;
     gap: 10px;
-    background-color: #f3f3f3;
+    background-color: rgba(211, 211, 211, 0.495);
     padding: 5px;
 }
 
@@ -47,6 +47,7 @@ h1 {
     font-size: 16px;
     padding: 10%;
     flex-wrap: wrap;
+    background-color: #f3f3f386;
 }
 
 h2 {
@@ -68,6 +69,63 @@ h2 {
 }
 
 .textes-haut button:hover {
-    background-image: linear-gradient(#e67dc3, #BF9CE8); /*couleurs plus claires choisies sur la roue chromatique. On peut aussi mettre opacity*/
+    background-image: linear-gradient(#e67dc3, #BF9CE8); /*couleurs plus claires choisies sur la roue chromatique. On peut aussi mettre opacity à 0.9 par exemple*/
     box-shadow: 0px 5px 50px -8px #000000;;
+}
+
+/* FONCTIONNEMENT*/
+
+.fonctionnement {
+    
+    align-items: center;
+}
+
+h2 {
+    padding: 5%;
+    
+}
+
+ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    list-style: none;
+    text-align: center;
+     margin: 0px 10%; /* Afin que les trois instructions soient décalées de la gauche, et soient alignées sans être centrées car la première instruction est plus longue =décalage*/
+    gap: 20px;
+}
+
+li {
+    padding: 30px 60px;
+    background-color: #F6F6F6;
+    border-radius: 30px;
+    gap: 40%;
+    box-shadow: 3px 5px 10px -10px #000000;
+    position: relative;
+}
+
+.puce-violette {
+    background-color: #bf9ce837;
+}
+
+.degustez { color: #9356DC;}
+
+.numeros {
+    position:absolute;
+    margin-left: -70px;
+    margin-top: -5px;
+    border: 1px solid #9356DC;
+    background-color: #9356DC;
+    color: white;
+    border-radius: 50%;
+}
+
+.un { padding: 5px 9px;}
+.deux { padding: 5px 8px;}
+.trois { padding: 5px;}
+
+li i {
+    position: absolute;
+    margin-left: -30px;
+    color: grey;
 }
