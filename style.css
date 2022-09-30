@@ -78,6 +78,7 @@ h2 {
 .fonctionnement {
     
     align-items: center;
+    padding-bottom: 50px;
 }
 
 h2 {
@@ -128,4 +129,75 @@ li i {
     position: absolute;
     margin-left: -30px;
     color: grey;
+}
+
+/*RESTAURANTS*/
+
+.bloc-restaus {
+    background-color: #F3F3F3;
+    padding: 30px 0px;
+}
+
+.carte-modele {
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    height: 260px;
+    box-shadow: 3px 5px 10px -10px #000000;
+}
+
+.carte-modele img {
+    height: 180px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
+.carte-modele button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #99E2D0;
+    border: none;
+    border-radius: 2px;
+    color: green;
+    padding: 5px;
+}
+
+.titres-coeur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -4px 10px;
+}
+
+.titres-restau {
+    margin: -5px; /*NE MARCHE PAS. Comment rapprocher les deux lignes ensemble...?*/
+}
+
+.gris-clair {
+    color: grey;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #000000d0;
+    color: white;
+    padding: 5%
+}
+
+h4 {
+    font-family: "Shrikhand", "sans-serif";
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
 }
