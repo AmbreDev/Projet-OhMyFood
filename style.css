@@ -13,6 +13,34 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.loading-spinner {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    background-color: lightgrey;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disparaitre 500ms 3s;
+    animation-fill-mode: forwards; /*que le cadre du loading reste dans son dernier état=opcaity 0)*/ 
+}
+
+.loading-spinner i {
+    animation: tourner 3s linear;
+    color: #9356DC;
+}
+
+@keyframes disparaitre {
+    100% {visibility: hidden;}
+} 
+
+@keyframes tourner {
+    to {transform: rotate(360deg);}
+    
+}
+
 /* HEADER*/
 
 header {
@@ -51,7 +79,7 @@ h1 {
 }
 
 h2 {
-    font-weight: 900;
+    font-weight: 500;
 }
 
 /*comment mettre l'autre option du roboto plus fin pour "découvrez des restaus..."? */
@@ -73,12 +101,17 @@ h2 {
     box-shadow: 0px 5px 50px -8px #000000;;
 }
 
+.textes-haut p {
+    font-weight: 100;
+}
+
 /* FONCTIONNEMENT*/
 
 .fonctionnement {
     
     align-items: center;
     padding-bottom: 50px;
+    width: 100%;
 }
 
 h2 {
@@ -92,7 +125,7 @@ ol {
     padding-left: 0px;
     list-style: none;
     text-align: center;
-     margin: 0px 10%; /* Afin que les trois instructions soient décalées de la gauche, et soient alignées sans être centrées car la première instruction est plus longue =décalage*/
+    margin: 5%;
     gap: 20px;
 }
 
@@ -100,10 +133,11 @@ li {
     padding: 30px 60px;
     background-color: #F6F6F6;
     border-radius: 30px;
-    gap: 40%;
     box-shadow: 3px 5px 10px -10px #000000;
-    position: relative;
+    display: block;
+    width: 95%;
 }
+
 
 .puce-violette {
     background-color: #bf9ce837;
@@ -169,19 +203,49 @@ li i {
     padding: 5px;
 }
 
-.titres-coeur {
+.titres-restaus {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     margin: -4px 10px;
 }
 
-.titres-restau {
-    margin: -5px; /*NE MARCHE PAS. Comment rapprocher les deux lignes ensemble...?*/
+.titres-coeur {
+    position: relative;
+}
+
+.titres-coeur i {
+    font-size: 150%;
+}
+
+.fa-heart {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.effet {
+    background-image: linear-gradient(#e67dc3, #BF9CE8);
+    color: transparent;
+    background-clip: text; 
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.effet:hover {
+    opacity: 1;
+}
+
+
+.soustitre {
+    display: block;
+    position: relative;
+    top: -12px;
 }
 
 .gris-clair {
-    color: grey;
+    color: #00000089;
 }
 
 /*FOOTER*/
@@ -200,4 +264,20 @@ h4 {
 footer a {
     text-decoration: none;
     color: white;
+}
+
+/*MEDIA QUERIES POUR TABLETTES ET DESKTOP*/
+
+@media screen and (min-width: 768px) {
+    .restaus {display: flex; flex-wrap: wrap;}
+    .carte-modele {width: 40%;}
+    
+}
+
+/*MEDIA QUERIES POUR DESKTOP*/
+
+@media screen and (min-width: 992px) {
+    li {width: 30%;}
+    .textes-haut {padding: 5%;}
+    h2 {padding:1%;}
 }
