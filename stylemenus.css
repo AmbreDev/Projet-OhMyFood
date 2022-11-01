@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/*LOADING SPINNER*/
+
+.loading-spinner {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    background-color: lightgrey;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disparaitre 500ms 3s;
+    animation-fill-mode: forwards; /*que le cadre du loading reste dans son dernier état=opcaity 0)*/ 
+}
+
+.loading-spinner i {
+    animation: tourner 3s linear;
+    color: #9356DC;
+}
+
+@keyframes disparaitre {
+    100% {visibility: hidden;}
+} 
+
+@keyframes tourner {
+    to {transform: rotate(360deg);}
+    
+}
+
+/*APPARITION MENUS*/
+
+@keyframes apparition {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+header {
+    display: flex;
+    gap: 20%;
+    text-align: center;
+    box-shadow: 0px 2px 2px lightgray;
+    padding: 20px;
+}
+
+header img {
+    width: 50%;
+}
+
+
+section img {
+    width: 100%;
+    height: 30%;
+}
+
+/*MAIN*/
+
+main {
+    height: 100%;
+    background-color: #f3f3f3;
+}
+
+.corps {
+    background-color: #f3f3f3;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    top: -40px;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 30px; 
+}
+
+h1 {
+    font-family: "Shrikhand", cursive;
+    margin-left: 20px;
+}
+
+.type-plat {
+    margin: 10px;
+    padding-top: 30px;
+}
+
+.titre-et-coeur {
+    position: relative;
+    justify-content:space-around;
+    margin-top: 70px;
+}
+
+.titre-et-coeur i {
+    position: absolute;
+    top: 5%;
+    right: 20%;
+}
+
+.gris-clair {
+    color: #000000b7;
+}
+
+.effet {
+    background-image: linear-gradient(#e67dc3, #BF9CE8);
+    color: transparent;
+    background-clip: text; 
+    -webkit-background-clip: text;
+    opacity: 0;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.effet:hover {
+    opacity: 1;
+}
+
+.tous-menus {
+    padding: 3%;
+}
+
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 70px;
+    margin: 1Opx auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px lightgray;
+    justify-content: space-between;
+    overflow: hidden;
+    max-width: 500px;
+    margin: 3% 0;
+    animation: apparition 3s;
+    animation-fill-mode: backwards;
+}
+
+.effet2 {
+    animation-delay: 1s;
+}
+
+.effet3 {
+    animation-delay: 2s;
+}
+
+
+h2 {
+    font-size: 16px;
+}
+
+.type-plat {
+    position: relative;
+    color: #000000b7;
+}
+
+.type-plat:before {
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 1px; /*la valeur ne change pas si je veux le grossir*/
+    bottom: 0px;
+    margin: -3px 0;
+    border-bottom: 1px solid #99E2D0;
+}
+
+.menu:first-child {
+    animation: intro-animation 700ms ease-out forwards;
+} 
+
+.titres {
+   font-size: 14px;
+   padding-left: 2%;
+   width: 50%;
+   flex-grow: 2;
+   margin: 0;
+   line-height: 0.9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.titres p {
+    color: #000000b7;
+}
+
+.prix-icone {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: none;
+}
+
+.prix {
+    padding: 0 1em;
+    align-self: end;
+    font-weight: bold;
+}
+
+.prix-icone div {
+    background-color: #99E2D0;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    max-width: 0px;
+    transition: max-width 400ms ease-in-out;
+}
+
+.prix-icone div i {
+    padding: 0 16px;
+}
+
+.menu:hover .prix-icone i {
+    transform: rotate(1turn);
+    transition: transform 400ms ease-in-out;
+}
+
+.menu:hover .prix-icone div {
+    max-width: 150px;
+}
+
+button {
+    margin: 30px 25%;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    padding: 15px 15%;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 5px 24px -8px #000000;
+}
+
+button:hover {
+    background-image: linear-gradient(#e67dc3, #BF9CE8); /*couleurs plus claires choisies sur la roue chromatique. On peut aussi mettre opacity à 0.9 par exemple*/
+    box-shadow: 0px 5px 50px -8px #000000;;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #000000d0;
+    color: white;
+    padding: 5%
+}
+
+h4 {
+    font-family: "Shrikhand", "sans-serif";
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
