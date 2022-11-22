@@ -13,7 +13,7 @@
     width:100%;
     height: 100%;
     background-color: lightgrey;
-    z-index: 1;
+    z-index: 2;
     opacity: 0.9;
     animation: disparaitre 500ms 3s;
     animation-fill-mode: forwards; /*que le cadre du loading reste dans son dernier état=opcaity 0)*/ 
@@ -60,6 +60,10 @@ header {
 
 header img {
     width: 50%;
+}
+
+header a {
+    color: #000000;
 }
 
 
@@ -142,18 +146,20 @@ h1 {
     overflow: hidden;
     max-width: 500px;
     margin: 3% 0;
-    animation: apparition 3s;
+    animation: apparition 1s;
+    animation-delay: 3000ms;
     animation-fill-mode: backwards;
+    
 }
 
-.effet2 {
-    animation-delay: 1s;
-}
-
-.effet3 {
-    animation-delay: 2s;
-}
-
+.deux {animation-delay: 3200ms;}
+.trois {animation-delay: 3400ms;}
+.quatre {animation-delay: 3600ms;}
+.cinq {animation-delay: 3800ms;}
+.six {animation-delay: 4000ms;}
+.sept {animation-delay: 4200ms;}
+.huit {animation-delay: 4400ms;}
+.neuf {animation-delay: 4600ms;}
 
 h2 {
     font-size: 16px;
@@ -168,15 +174,12 @@ h2 {
     content: "";
     position: absolute;
     width: 8%;
-    height: 1px; /*la valeur ne change pas si je veux le grossir*/
+    height: 1px;
     bottom: 0px;
     margin: -3px 0;
-    border-bottom: 1px solid #99E2D0;
+    border-bottom: 3px solid #99E2D0;
 }
 
-.menu:first-child {
-    animation: intro-animation 700ms ease-out forwards;
-} 
 
 .titres {
    font-size: 14px;
@@ -186,8 +189,8 @@ h2 {
    margin: 0;
    line-height: 0.9;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: hidden; 
+    text-overflow: ellipsis; /*mot coupé mais pas les 3 petits points: ok?*/
 }
 
 .titres p {
@@ -216,8 +219,9 @@ h2 {
     align-items: center;
     font-size: 22px;
     max-width: 0px;
-    transition: max-width 400ms ease-in-out;
+    transition: max-width 400ms ease-in-out; 
 }
+
 
 .prix-icone div i {
     padding: 0 16px;
@@ -264,3 +268,30 @@ footer a {
     text-decoration: none;
     color: white;
 }
+
+/*MEDIA QUERIES POUR TABLETTES*/
+
+@media screen and (min-width: 768px) {
+    header {align-items: center;}
+    header i {font-size: 40px;}
+    .corps {text-align: center;}
+    .tous-menus {margin: 20px 20%;}
+}
+
+
+/*MEDIA QUERIES POUR DESKTOP*/
+
+@media screen and (min-width: 992px)
+{
+    header {align-items: center;}
+    header i {font-size: 30px; margin-left: 3%;}
+    h1 {margin: 3% 40%; width: 30%;}
+    .tous-menus {display: flex; justify-content: space-between;}
+    .menu:hover .prix-icone div {max-width: 100%;}
+    button {margin: 30px 32%;}
+    .type-plat {margin-bottom: 30px;}
+    section img {height: 550px; object-fit: cover;}
+    .entrees, .plats, .desserts {width: 30%;}
+}
+
+/* token: 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 */

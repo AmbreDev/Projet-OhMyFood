@@ -1,0 +1,90 @@
+@keyframes intro-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(2em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    box-shadow: 1px 1px 8px 1px rgb(0 0 0 / 50%);
+    border-radius: 1em;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 1.5em auto;
+    background: white;
+    max-width: 500px;
+    transform: translateY(4em);
+}
+.menu-item__titre {
+    padding: 0.7em 0 0.7em 1em;
+    width: 50%;
+    flex-grow: 2;
+    line-height: 1.5;
+}
+.menu-item__titre p, .menu-item__titre h3 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.menu-item__button {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: none;
+}
+.menu-item__button p {
+    padding: 0 1em;
+    align-self: end;
+    font-weight: bold;
+}
+
+
+.menu-item__button div {
+    background-color: #99E2D0;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    max-width: 0px;
+    transition: max-width 400ms ease-in-out;
+}
+.menu-item__button div i {
+    padding: 0 1em;
+}
+.menu-item:hover .menu-item__button i {
+  transform: rotate(1turn);
+  transition: transform 400ms ease-in-out;
+}
+.menu-item:hover .menu-item__button div {
+  max-width: 150px;
+}
+
+
+h2 {
+    font-weight: 300;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+}
+h2:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 2%;
+    border-bottom: 1px solid red;
+}
+
+.menu-item:nth-child(1) {
+    animation: intro-animation 700ms ease-out forwards;
+} 
